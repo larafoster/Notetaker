@@ -1,10 +1,11 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "This app allows the user to quickly and easily create a Team Profile by using a command-line application to generate a webpage that displays their team's basic info. The html page displays the team's information in a card format for quick access to the team's email and github repos.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +13,15 @@
     "express": "^4.17.1",
     "uuid": "^8.3.2",
     "uuidv4": "^6.2.11"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larafoster/Notetaker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/larafoster/Notetaker/issues"
+  },
+  "homepage": "https://github.com/larafoster/Notetaker#readme"
 }
