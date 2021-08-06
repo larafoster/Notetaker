@@ -1,130 +1,99 @@
-# 11 Express.js: Note Taker
+# NOTE TAKER
+  
+  ## Description   
+  This app allows the user to quickly and easily create a Team Profile by using a command-line application to generate a webpage that displays their team's basic info. The html page displays the team's information in a card format for quick access to the team's email and github repos.
 
-## Your Task
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Tests](#tests)
+  - [Project Links](#links)
+  - [Contribute](#contribute)
+  - [Credits](#credits)
+  - [License](#license)
 
-Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+  ## Installation
+  Once you clone this repository, you will need to open the terminal in the folder that contains your index.js file. First run 'npm install' to install node modules. Then run 'node index' to see the app in action.
+  
+  ```shell
+  npm install
+  node index
+  ```
+  
+  ## Usage 
+   Once your node modules are installed, simply type 'node index' into the terminal and proceed through the questions. The generated html file will be in the Results FOLDER along with the css and image files.
 
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
-
-
-## User Story
-
-```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-```
-
-
-## Acceptance Criteria
-
-```
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
+  ## Tests 
+  Unit testing was performed with jest. See link under project links.    
 
 
-## Mock-Up
+  ### Links
+  Project Links:
+  - [Github Repo](https://github.com/larafoster/Team-Profile-Generator) 
 
-The following images show the web application's appearance and functionality:
+  View this app in motion:
+  - [video of inquirer prompts](https://drive.google.com/file/d/1QYA5xb6A5U666e_Wfeg9YpTnfT--KJCh/view)
+  - [video of rendered webpage ](https://drive.google.com/file/d/1-lzszWnI41-aat3fb-qtOCeV_gVEb2s7/view)
+  - [video of test](https://drive.google.com/file/d/1Urtq2ulaKLz0LQWqg0xPf5PoC2brL74O/view)
 
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
+  Screenshots of app:
+  - [img of inquirer prompts](./src/assets/img/inquirer.png)
+  - [img of test png](./src/assets/img/test1.png)
+  - [img of Web page](./src/assets/img/teamwebpage.png)
 
-![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-homework-demo-02.png)
-
-
-## Getting Started
-
-On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
-
-The following HTML routes should be created:
-
-* `GET /notes` should return the `notes.html` file.
-
-* `GET *` should return the `index.html` file.
-
-The following API routes should be created:
-
-* `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
-
-* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
+  ## Credits 
+  This project is created with the following technologies:
+  - [Node.js](https://nodejs.org/en/) 
+  - [Inquirer.js](https://www.npmjs.com/package/inquirer) 
+  - [jest.js](https://www.npmjs.com/package/jest) 
 
 
-## Bonus
+  ***
+ The code for this project was researched extensively. Here are a few of the tutorials I found helpful:
 
-You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
+   - [Jest](https://github.com/facebook/jest/issues/3457)     
+    
+      ```test('name', () => {
+        expect({value: 'value'}).toBeTruthy();
+        expect(typeof {value: 'value'}).toBe('object');
+        })
+      ```
+    
+  ***
 
-* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+  - [jest](https://stackoverflow.com/questions/50818474/how-to-properly-test-if-the-type-of-the-result-is-a-javascript-function-in-jes) 
 
+    ```describe("", () => {
+      it("test", () => {
+      const somethingThatReturnsAFunction = () => () => {};
+      const theResult = somethingThatReturnsAFunction();
+      expect(typeof theResult).toBe("function");
+      });
+     ```     
+  ***
 
-## Grading Requirements
+  - [.join .map .filter](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d) 
 
-This homework is graded based on the following criteria: 
+    ```Say we want two arrays now: one for rebel pilots, the other one for imperials. With .filter() it couldn’t be easier!```
 
+   ***
 
-### Technical Acceptance Criteria: 40%
+  - [Additional examples on Template Literals and expression interpolation](https://ado.xyz/blog/better-strings-in-javascript-with-template-literals/) 
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+    ```The syntax for expression interpolation is ${}. Anything we place between the curly brackets will be executed as code. In here we can pass variables, functions, or other logic that will be evaluated and it’s final value displayed.```  
 
-  * Application front end must connect to an Express.js back end.
+  ## Contribute
+  Please feel free to fork this project and create your own branch. Any suggestions for improvement are welcomed.
 
-  * Application back end must store notes that have a unique id in a JSON file.
+ ## License
+ This project is licensed under the MIT License
 
-  * Application must be deployed to Heroku.
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+  
+  ## Questions
+  Contact me if you have any questions about this project:
 
+  - [Send me an email](mailto:larafoster.dev@gmail.com)
 
-### Deployment: 36%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-
-### Application Quality: 11%
-
-* Application console is free of errors.
-
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-### Bonus: +10 Points
-
-* Application allows users to delete notes.
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+  You can find my projects on Github:
+  - [Find me on Github](https://github.com/larafoster)

@@ -1,7 +1,7 @@
 const router = require ('express').Router ();
 
-const {v4: uuidv4} = require ('uuid');
-const {
+const {v4: uuidv4} = require ('uuid'); //npm module to create random id numbers
+const {  
   readFromFile,
   readAndAppend,
   writeToFile,
@@ -11,7 +11,7 @@ router.get ('/notes', (req, res) => {
   readFromFile ('./db/db.json').then (data => res.json (JSON.parse (data)));
 });
 
-// POST Route for a new UX/UI note
+// POST Route for a new note
 router.post ('/notes', (req, res) => {
   console.log (req.body);
 
