@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "title": "Grocery List",
+        "text": "eggs\nmilk\ncheese\nchips\n",
+        "id": "41658d19-f4c9-4ca3-9fd0-8e27e9ef33d6"
+    },
+    {
+        "title": "To Do's",
+        "text": "post office\ndry cleaner\ncar wash",
+        "id": "d2bf7693-b9ba-40a2-bec5-cddc1b590a7f"
+    },
+    {
+        "title": "Chores",
+        "text": "Ryan - pick up your clothes, vacuum and dust your shelves\nKatie - fold the clothes in the dryer and put them away",
+        "id": "ec884a40-25da-4a07-ac42-24d675a028c1"
+    }
+]
