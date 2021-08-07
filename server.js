@@ -2,7 +2,7 @@ const express = require('express');
 const api = require('./routes/index.js');
 const path = require("path");
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.json());
@@ -20,6 +20,6 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
-app.listen(PORT, () =>
-  console.log(`App listening at:${PORT} 🚀`)
-);
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
