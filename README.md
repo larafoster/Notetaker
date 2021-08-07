@@ -25,11 +25,10 @@
   ### Links
   Project Links:
   - [Github Repo](https://github.com/larafoster/Notetaker) 
+  - [Heroku Deployment](https://notetaker-osu.herokuapp.com/) 
 
   View this app in motion:
   - [video of notetaker app](https://drive.google.com/file/d/1SbVMo1JakbpeXXytv9zN0O0T9L7UN6hb/view)
-  - [video of heroku webpage ](https://drive.google.com/file/d/1-lzszWnI41-aat3fb-qtOCeV_gVEb2s7/view)
-  
 
   Screenshots of app:
   - [img of notes home page](./public/assets/img/notes-index.png)
