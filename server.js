@@ -21,5 +21,5 @@ app.get('/notes', (req, res) =>
 );
 
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+    console.log(`The app is running on port ${ PORT }`);
 });
